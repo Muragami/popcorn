@@ -1,0 +1,17 @@
+[
+{"name":"user","parent":"","top":true,"rights":{},"tags":{},"info":{},"masks":{}},
+{"name":"mod","parent":"1","top":false,"rights":{"mod":{}},"tags":{},"info":{},"masks":{}},
+{"name":"supermod","parent":"2","top":false,"rights":{"mod":{"super":{}}},"tags":{},"info":{},"masks":{}},
+{"name":"designer","parent":"3","top":false,"rights":{"mod":{"super":{}},"designer":{}},"tags":{},"info":{},"masks":{}},
+{"name":"engineer","parent":"4","top":false,"rights":{"mod":{"super":{}},"designer":{},"engineer":{}},"tags":{},"info":{},"masks":{}},
+{"name":"admin","parent":"5","top":false,"_rights":{"admin":true},"tags":{},"info":{},"masks":{}},
+{"name":"space","parent":"","top":true,"mapped":true,"local":"","owner":"","founder":"","rights":{},"above":{},"below":{},"conceal":{}},
+{"name":"ceiling","parent":"7","top":false,"mapped":true,"public":true,"accept":{},"local":"","owner":"","founder":"","rights":{},"above":{},"below":{},"conceal":{}},
+{"name":"room","parent":"8","top":false,"mapped":true,"public":true,"accept":{},"local":"","owner":"","founder":"","rights":{},"above":{},"below":{},"conceal":{}},
+{"name":"library","parent":"8","top":false,"mapped":true,"public":true,"accept":{},"local":"","owner":"","founder":"","rights":{},"above":{},"below":{},"conceal":{}},
+{"name":"message","parent":"","top":true,"local":"","within":"","tags":{}},
+{"name":"group","parent":"","top":true,"public":true,"size":0,"accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
+{"name":"page","parent":"12","top":false,"public":true,"size":0,"accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
+{"name":"book","parent":"12","top":false,"public":true,"size":0,"accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
+{"name":"session","parent":"12","top":false,"public":true,"size":0,"accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}}
+]

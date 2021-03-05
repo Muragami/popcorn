@@ -1,0 +1,7 @@
+[
+{"name":"everyone","class":"12","owner":"20","founder":"20"},
+{"name":"the sun","class":"8","owner":"20","founder":"20"},
+{"name":"the moon","class":"8","owner":"20","local":"20","founder":"20","public":false},
+{"name":"the theatre","class":"8","owner":"20","founder":"20","below":{"17":{}}},
+{"name":"admin","class":"5"}
+]
