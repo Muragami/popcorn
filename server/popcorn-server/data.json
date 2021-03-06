@@ -1,0 +1,8 @@
+[
+  ["cfg","ps_release","[\"Ridgeway\"]"],
+  ["cfg","ps_ver_major","[0]"],
+  ["cfg","ps_ver_minor","[1]"],
+  ["cfg","ps_runs","[\"php7\"]"],
+  ["cfg","ps_speaks","[\"json\"]"],
+  ["cfg","ps_msg_cap","[800]"]
+]
