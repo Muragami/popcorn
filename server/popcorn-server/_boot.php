@@ -17,28 +17,25 @@ while($conn->next_result());
 // insert minimal data needed
 // first classes
 $sql = "";
-$i=0;
-$cls = array();
-$lines=explode("\n",file_get_contents(WP_PLUGIN_DIR."/popcorn-server/class.json"));
-foreach($lines as $line) {
-  $line = trim($line);
-  if (substr($line, -1) == ',') { $line = substr($line,0,-1); }
-  if ($line != "[" && $line != "]" && $line != "") {
-    $sql .= "INSERT INTO ps01_thing (data,class) VALUES ('$line','0'); ";
-    $cls[$i] = $line;
-    $i += 1;
-  }
+$dat = json_decode(file_get_contents(WP_PLUGIN_DIR."/popcorn-server/class.json"),true);
+foreach ($dat as $ln) {
+  $line = json_encode($ln);
+  $n = $ln['name'];
+  if (array_key_exists('within',$ln)) { $w = hexdec($ln['within']);
+  } else { $w = 0; }
+  $sql .= "INSERT INTO ps01_thing (data,class,name,within) VALUES ('$line','0','$n','$w'); ";
 }
+
 if ($conn->multi_query($sql) === TRUE) { $ret[] = "ok : classes loaded as things"; }
   else { $ret[] = "err: " . $conn->error;  }
 while($conn->next_result());
-$i = 0;
 $sql = "";
-while ($i < count($cls)) {
-  $id = $i + 1;
-  $line = $cls[$i];
-  $sql .= "INSERT INTO ps01_class (id,data) VALUES ($id,'$line'); ";
-  $i += 1;
+$id = 1;
+foreach ($dat as $ln) {
+  $line = json_encode($ln);
+  $p = hexdec($ln['parent']);
+  $sql .= "INSERT INTO ps01_class (id,data,parent) VALUES ($id,'$line',$p); ";
+  $id += 1;
 }
 if ($conn->multi_query($sql) === TRUE) { $ret[] = "ok: classes registered as classes"; }
   else { $ret[] = "err: " . $conn->error;  }

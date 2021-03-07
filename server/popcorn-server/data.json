@@ -4,5 +4,11 @@
   ["cfg","ps_ver_minor","[1]"],
   ["cfg","ps_runs","[\"php7\"]"],
   ["cfg","ps_speaks","[\"json\"]"],
-  ["cfg","ps_msg_cap","[800]"]
+  ["cfg","ps_msg_cap","[800]"],
+  ["class","user","{\"id\":1}"],
+  ["class","mod","{\"id\":2}"],
+  ["class","supermod","{\"id\":3}"],
+  ["class","designer","{\"id\":4}"],
+  ["class","engineer","{\"id\":5}"],
+  ["class","admin","{\"id\":6}"]
 ]

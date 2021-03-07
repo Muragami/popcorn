@@ -11,7 +11,7 @@
 {"name":"library","parent":"8","top":false,"mapped":true,"public":true,"accept":{},"local":"","owner":"","founder":"","rights":{},"above":{},"below":{},"within":"","conceal":{}},
 {"name":"message","parent":"","top":true,"local":"","within":"","tags":{}},
 {"name":"group","parent":"","top":true,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
-{"name":"page","parent":"12","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
-{"name":"book","parent":"12","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
-{"name":"session","parent":"12","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}}
+{"name":"page","parent":"C","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
+{"name":"book","parent":"C","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}},
+{"name":"session","parent":"C","top":false,"public":true,"size":0,"within":"","accept":{},"share":{},"local":"","owner":"","tags":{},"info":{}}
 ]
