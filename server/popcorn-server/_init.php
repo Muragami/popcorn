@@ -51,6 +51,18 @@ parent BIGINT(8) UNSIGNED
 if ($conn->query($sql) === TRUE) { $ret[] = "ok : ps01_group table created"; }
   else { $ret[] = "err: " . $conn->error;  }
 
+$sql = "CREATE TABLE ps01_status (
+id BIGINT(8) UNSIGNED,
+spot BIGINT(8) UNSIGNED,
+last TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data JSON NOT NULL,
+INDEX lgrp (spot,last),
+INDEX igrp (spot,id)
+)";
+
+if ($conn->query($sql) === TRUE) { $ret[] = "ok : ps01_status table created"; }
+  else { $ret[] = "err: " . $conn->error;  }
+
 $sql = "CREATE TABLE ps01_data (
 name VARCHAR(255) PRIMARY KEY, bundle VARCHAR(255),
 data JSON NOT NULL, KEY(bundle))";

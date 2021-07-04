@@ -28,5 +28,22 @@ function psPutBundle($conn,$name,&$arr,$tab = 'ps01_data') {
   if ($conn->query($sql)) { return "ok :"; } else { return "err: " . $conn->error;  }
 }
 
+// get specific keys from data storage merged into an array
+function psFromData($conn,$keys,&$arr,$tab = 'ps01_data') {
+  $sql = "SELECT name, data FROM $tab WHERE name in ";
+  $sql .= "(";
+  // build the sql!
+  foreach ($keys as $ln) { $sql .= "'$ln',"; }
+  $sql = substr($sql,0,-1) . ');'; // trim the trailing ,
+  if ($result = $conn->query($sql))
+  {
+    while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+      $arr[$row['name']] = json_decode($row['data']);
+    }
+    return "ok :";
+  } else { return "err: " . $conn->error;  }
+}
 
+// let us record we have included pop.php, with a global: $_popped
+$_popped = 1;
 ?>
